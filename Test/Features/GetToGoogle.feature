@@ -1,4 +1,4 @@
-﻿Feature: SpecFlowFeature1
+﻿Feature: GetToGoogle
 
 @mytag
 Scenario: Something

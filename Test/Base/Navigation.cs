@@ -1,4 +1,5 @@
-﻿using Test.Pages;
+﻿using Test.Config;
+using Test.Pages;
 
 namespace Test.Base
 {
@@ -7,7 +8,7 @@ namespace Test.Base
         internal StartBrowser StartBrowser()
         {
             var startBrowser = GetInstance<StartBrowser>();
-            startBrowser.Navigate("https://www.google.com");
+            startBrowser.Navigate(Settings.URL);
             return startBrowser;
         }
 
