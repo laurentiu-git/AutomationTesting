@@ -1,5 +1,5 @@
 ﻿Feature: GetToGoogle
 
 @mytag
-Scenario: Something
+Scenario: Google Was Launched
 	Given I go to Google
