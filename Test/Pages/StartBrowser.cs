@@ -1,19 +1,35 @@
-﻿using Test.Base;
+﻿using OpenQA.Selenium;
+using Test.Base;
+using Test.Extensions;
 using Test.Utilities;
 
 namespace Test.Pages
 {
     public class StartBrowser : Navigation
     {
+         string gmailSelector = "gb_g";
+         string googleAgree = "/html/body/div/c-wiz/div[2]/div/div/div/div/div[2]/form/div/span";
+         string iframe = "//iframe";
 
         public void Navigate(string url)
         {
             Browser.Start().Navigate().GoToUrl(url);
         }
 
-        public void otherSomething()
+        public void clickMenu()
         {
-            doSomething();
+            Browser.Driver.SwitchTo().DefaultContent();
+            var element = Browser.Driver.FindElement(By.ClassName(gmailSelector), 20);
+            element.Click();
         }
+
+        public void clickAgree()
+        {
+            Browser.Driver.SwitchTo().Frame(Browser.Driver.FindElement(By.XPath(iframe), 20));
+            var element = Browser.Driver.FindElement(By.XPath(googleAgree), 20);
+            element.Click();
+           
+        }
+
     }
 }

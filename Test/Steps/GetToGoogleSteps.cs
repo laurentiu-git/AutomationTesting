@@ -21,5 +21,21 @@ namespace Test.Steps
             //   startBrowser.Navigate(google);
         }
 
+        [Given(@"I click on menu")]
+        public void GivenIClickOnMenu()
+        {
+            var page = PageFactory.Instance.CurrentPage.GetInstance<StartBrowser>();
+            page.clickMenu();
+        }
+
+        [Given(@"I click on Agree")]
+        public void GivenIClickOnAgree()
+        {
+            var page = PageFactory.Instance.CurrentPage.GetInstance<StartBrowser>();
+            page.clickAgree();
+        }
+
+
+
     }
 }
