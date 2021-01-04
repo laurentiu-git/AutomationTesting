@@ -10,6 +10,7 @@ namespace Test.Pages
          string gmailSelector = "gb_g";
          string googleAgree = "/html/body/div/c-wiz/div[2]/div/div/div/div/div[2]/form/div/span";
          string iframe = "//iframe";
+         string verifyGmail = "h-c-headline--one";
 
         public void Navigate(string url)
         {
@@ -29,6 +30,13 @@ namespace Test.Pages
             var element = Browser.Driver.FindElement(By.XPath(googleAgree), 20);
             element.Click();
            
+        }
+
+        public string checkIfGmail()
+        {
+          var element = Browser.Driver.FindElement(By.ClassName(verifyGmail), 20);
+          var text = element.Text;
+            return text;
         }
 
     }

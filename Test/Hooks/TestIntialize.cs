@@ -7,15 +7,15 @@ namespace Test.Hooks
     [Binding]
     public sealed class TestIntialize
     {
-        [BeforeScenario]
-        public void BeforeScenario()
+        [BeforeFeature]
+        public static void BeforeScenario()
         {
             ConfigReader.InitializeSettings("DemoBranch");
             Browser.KillChromeProcesses();
         }
 
-        [AfterScenario]
-        public void AfterScenario()
+        [AfterFeature]
+        public static void AfterScenario()
         {
             Browser.Stop();
         }
