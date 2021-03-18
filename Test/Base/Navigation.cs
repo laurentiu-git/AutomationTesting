@@ -1,20 +1,26 @@
-﻿using Test.Config;
+﻿using OpenQA.Selenium;
+using Test.Config;
+using Test.Extensions;
 using Test.Pages;
+using Test.Utilities;
 
 namespace Test.Base
 {
     public class Navigation : BasePage
     {
-        internal StartBrowser StartBrowser()
+
+        private static string LoginSelector = "login_buttons_login_text";
+
+        internal LoginPage GotoLoginPage()
         {
-            var startBrowser = GetInstance<StartBrowser>();
-            startBrowser.Navigate(Settings.URL);
-            return startBrowser;
+            ClickLoginButton();
+            return new LoginPage();
         }
 
-        public void doSomething()
+        private void ClickLoginButton()
         {
-            //
+            var loginElement = Browser.Driver.FindElement(By.ClassName(LoginSelector), 20);
+            loginElement.Click();
         }
     }
 }
