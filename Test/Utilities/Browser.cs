@@ -22,6 +22,7 @@ namespace Test.Utilities
             options.AddArgument("--ignore-certificate-errors");
             options.AddArgument("--incognito");
             options.AddArgument("--no-sandbox");
+            options.AddArgument("--headless");
 
             Driver  = new ChromeDriver(options);
             Driver.Manage().Window.Maximize();
