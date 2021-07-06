@@ -1,7 +1,7 @@
 ﻿{
     "DemoBranch": {
-        "url": "http://localhost/tutorial/",
-        "username": "AutoqTlMy",
-        "password": "Ap123456!"
+        "url": "http://localhost:7080/basic_auth",
+        "username": "admin",
+        "password": "admin"
     }
 }
