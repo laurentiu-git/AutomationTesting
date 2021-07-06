@@ -3,6 +3,7 @@ using TechTalk.SpecFlow;
 using Test.Config;
 using Test.Base;
 using NUnit.Framework;
+using Test.Utilities;
 
 namespace Test.Steps
 {
@@ -18,6 +19,12 @@ namespace Test.Steps
         {
             homePage = PageFactory.Instance.CurrentPage.GetInstance<HomePage>();
             homePage.Navigate();
+        }
+
+        [Given(@"I check URL")]
+        public void GivenICheckURL()
+        {
+            Assert.AreEqual(Browser.Driver.Url,Settings.URL);
         }
 
         [Given(@"I Log In")]
