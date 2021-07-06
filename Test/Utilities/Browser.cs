@@ -19,7 +19,7 @@ namespace Test.Utilities
             var options = new ChromeOptions();
             options.AddArgument("--ignore-certificate-errors");
             options.AddArgument("--incognito");
-            options.AddArgument(" --no-sandbox")
+            options.AddArgument(" --no-sandbox");
 
             Driver = new ChromeDriver(options);
             Driver.Manage().Window.Maximize();
