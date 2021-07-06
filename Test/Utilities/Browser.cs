@@ -19,10 +19,13 @@ namespace Test.Utilities
         public static ChromeDriver Start()
         {
             var options = new ChromeOptions();
-            options.AddArgument("--ignore-certificate-errors");
-            options.AddArgument("--incognito");
-            options.AddArgument("--no-sandbox");
-            options.AddArgument("--headless");
+         options.AddArgument("start-maximized"); // open Browser in maximized mode
+         options.AddArgument("disable-infobars"); // disabling infobars
+         options.AddArgument("--disable-extensions"); // disabling extensions
+         options.AddArgument("--disable-gpu"); // applicable to windows os only
+         options.AddArgument("--disable-dev-shm-usage"); // overcome limited resource problems
+         options.AddArgument("--no-sandbox"); // Bypass OS security model
+         options.AddArgument("--headless");
 
             Driver  = new ChromeDriver(options);
             Driver.Manage().Window.Maximize();
