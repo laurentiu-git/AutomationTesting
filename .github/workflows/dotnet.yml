@@ -23,7 +23,3 @@ jobs:
       run: dotnet build --no-restore
     - name: Install Chrome
       uses: browser-actions/setup-chrome@latest
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-  
-  
