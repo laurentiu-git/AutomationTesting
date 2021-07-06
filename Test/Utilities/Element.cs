@@ -23,7 +23,7 @@ namespace Test.Utilities
         public static By searchGameSelector = By.ClassName("cy-game-search-input");
         public static By gameSearched = By.XPath("//*[@id=\"orbit-container\"]/div[5]/nav/div[1]/div[1]/div/div/span[1]/ul/li/a/span");
 
-
+        public static By application = By.XPath("//nav[@class='md-nav']//a[contains(.,'Our Application')]");
 
     }
 }

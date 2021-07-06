@@ -1,7 +1,9 @@
 ﻿using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 
 namespace Test.Utilities
@@ -19,9 +21,9 @@ namespace Test.Utilities
             var options = new ChromeOptions();
             options.AddArgument("--ignore-certificate-errors");
             options.AddArgument("--incognito");
-            options.AddArgument(" --no-sandbox");
+            options.AddArgument("--no-sandbox");
 
-            Driver = new ChromeDriver(options);
+            Driver  = new ChromeDriver(options);
             Driver.Manage().Window.Maximize();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
