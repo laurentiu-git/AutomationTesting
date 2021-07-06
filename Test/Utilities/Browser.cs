@@ -21,7 +21,7 @@ namespace Test.Utilities
             var options = new ChromeOptions();
          options.AddArgument("start-maximized"); // open Browser in maximized mode
          options.AddArgument("--no-sandbox"); // Bypass OS security model
-      //   options.AddArgument("--headless");
+         options.AddArgument("--headless");
 
             Driver  = new ChromeDriver(options);
             Driver.Manage().Window.Maximize();
