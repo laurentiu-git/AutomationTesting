@@ -24,8 +24,8 @@ namespace Test.Steps
         [Given(@"I agree to data")]
         public void GivenIGoToChannelVideo()
         {
-            var agreeConditions = Browser.Driver.FindElement(Element.agreeCondition, 10);
-            agreeConditions.Click();
+           // var agreeConditions = Browser.Driver.FindElement(Element.agreeCondition, 10);
+           // agreeConditions.Click();
             Thread.Sleep(20000);
             var title = Browser.Driver.FindElement(Element.title, 10);
             var browserTitle = Browser.Driver.Title;
