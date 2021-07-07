@@ -27,6 +27,7 @@ namespace Test.Utilities
 
         //YT
         public static By agree = By.XPath("//*[@id=\"yDmH0d\"]/c-wiz/div/div/div/div[2]/div[1]/div[4]/form/div[1]/div/button/div[2]");
+        public static By agreeCondition = By.XPath("//span[.='I agree']");
         public static By title = By.XPath("//h1[@class='title style-scope ytd-video-primary-info-renderer']/yt-formatted-string[@class='style-scope ytd-video-primary-info-renderer']");
 
     }
